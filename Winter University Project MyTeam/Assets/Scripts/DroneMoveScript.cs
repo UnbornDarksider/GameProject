@@ -79,16 +79,16 @@ public class DroneMoveScript : MonoBehaviour
         {
             if (Input.GetKey(KeyCode.I) || Input.GetKey(KeyCode.K))
             {
-                ourDrone.velocity = ourDrone.velocity;
+                ourDrone.linearVelocity = ourDrone.linearVelocity;
             }
             else if (!Input.GetKey(KeyCode.I) && !Input.GetKey(KeyCode.K) && !Input.GetKey(KeyCode.A) && !Input.GetKey(KeyCode.D))
             {
-                ourDrone.velocity = new Vector3(ourDrone.velocity.x, Mathf.Lerp(ourDrone.velocity.y, 0, Time.deltaTime * 5), ourDrone.velocity.z);
+                ourDrone.linearVelocity = new Vector3(ourDrone.linearVelocity.x, Mathf.Lerp(ourDrone.linearVelocity.y, 0, Time.deltaTime * 5), ourDrone.linearVelocity.z);
                 upForce = 300;// 281;
             }
             else if (!Input.GetKey(KeyCode.I) && !Input.GetKey(KeyCode.K) && (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D)))
             {
-                ourDrone.velocity = new Vector3(ourDrone.velocity.x, Mathf.Lerp(ourDrone.velocity.y, 0, Time.deltaTime * 5), ourDrone.velocity.z);
+                ourDrone.linearVelocity = new Vector3(ourDrone.linearVelocity.x, Mathf.Lerp(ourDrone.linearVelocity.y, 0, Time.deltaTime * 5), ourDrone.linearVelocity.z);
                 upForce = 299;
             }
             else if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D))
@@ -149,19 +149,19 @@ public class DroneMoveScript : MonoBehaviour
     {
         if (Mathf.Abs(Input.GetAxis("Vertical")) > sensitivity && Mathf.Abs(Input.GetAxis("Horizontal")) > sensitivity)
         {
-            ourDrone.velocity = Vector3.SmoothDamp(ourDrone.velocity, Vector3.zero, ref velocityToSmoothDampToZero, 0.2f);
+            ourDrone.linearVelocity = Vector3.SmoothDamp(ourDrone.linearVelocity, Vector3.zero, ref velocityToSmoothDampToZero, 0.2f);
         }
         else if (Mathf.Abs(Input.GetAxis("Vertical")) > sensitivity && Mathf.Abs(Input.GetAxis("Horizontal")) < sensitivity)
         {
-            ourDrone.velocity = Vector3.SmoothDamp(ourDrone.velocity, Vector3.zero, ref velocityToSmoothDampToZero, 0.2f);
+            ourDrone.linearVelocity = Vector3.SmoothDamp(ourDrone.linearVelocity, Vector3.zero, ref velocityToSmoothDampToZero, 0.2f);
         }
         else if (Mathf.Abs(Input.GetAxis("Vertical")) < sensitivity && Mathf.Abs(Input.GetAxis("Horizontal")) > sensitivity)
         {
-            ourDrone.velocity = Vector3.SmoothDamp(ourDrone.velocity, Vector3.zero, ref velocityToSmoothDampToZero, 0.2f);
+            ourDrone.linearVelocity = Vector3.SmoothDamp(ourDrone.linearVelocity, Vector3.zero, ref velocityToSmoothDampToZero, 0.2f);
         }
         else if (Mathf.Abs(Input.GetAxis("Vertical")) < sensitivity && Mathf.Abs(Input.GetAxis("Horizontal")) < sensitivity)
         {
-            ourDrone.velocity = Vector3.SmoothDamp(ourDrone.velocity, Vector3.zero, ref velocityToSmoothDampToZero, 0.2f);
+            ourDrone.linearVelocity = Vector3.SmoothDamp(ourDrone.linearVelocity, Vector3.zero, ref velocityToSmoothDampToZero, 0.2f);
         }
     }
 
@@ -205,6 +205,6 @@ public class DroneMoveScript : MonoBehaviour
 
     private void DroneSound()
     {
-        droneSound.pitch = 1 + (ourDrone.velocity.magnitude / 90);
+        droneSound.pitch = 1 + (ourDrone.linearVelocity.magnitude / 90);
     }
 }
