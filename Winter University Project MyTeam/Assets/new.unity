@@ -281,6 +281,91 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &909137850
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: aed7cb94438f19b46abd4df337f5cb63, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 698.81335
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: aed7cb94438f19b46abd4df337f5cb63, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.0000104904175
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: aed7cb94438f19b46abd4df337f5cb63, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 393.20895
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: aed7cb94438f19b46abd4df337f5cb63, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: aed7cb94438f19b46abd4df337f5cb63, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: aed7cb94438f19b46abd4df337f5cb63, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: aed7cb94438f19b46abd4df337f5cb63, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: aed7cb94438f19b46abd4df337f5cb63, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: aed7cb94438f19b46abd4df337f5cb63, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: aed7cb94438f19b46abd4df337f5cb63, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: aed7cb94438f19b46abd4df337f5cb63, type: 3}
+      propertyPath: m_Name
+      value: zombie6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2214211392284440554, guid: aed7cb94438f19b46abd4df337f5cb63, type: 3}
+      propertyPath: m_DirtyAABB
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2214211392284440554, guid: aed7cb94438f19b46abd4df337f5cb63, type: 3}
+      propertyPath: m_AABB.m_Center.x
+      value: 0.0000011995435
+      objectReference: {fileID: 0}
+    - target: {fileID: 2214211392284440554, guid: aed7cb94438f19b46abd4df337f5cb63, type: 3}
+      propertyPath: m_AABB.m_Center.y
+      value: 0.36587107
+      objectReference: {fileID: 0}
+    - target: {fileID: 2214211392284440554, guid: aed7cb94438f19b46abd4df337f5cb63, type: 3}
+      propertyPath: m_AABB.m_Center.z
+      value: 0.014664423
+      objectReference: {fileID: 0}
+    - target: {fileID: 2214211392284440554, guid: aed7cb94438f19b46abd4df337f5cb63, type: 3}
+      propertyPath: m_AABB.m_Extent.x
+      value: 0.24632195
+      objectReference: {fileID: 0}
+    - target: {fileID: 2214211392284440554, guid: aed7cb94438f19b46abd4df337f5cb63, type: 3}
+      propertyPath: m_AABB.m_Extent.y
+      value: 0.3673327
+      objectReference: {fileID: 0}
+    - target: {fileID: 2214211392284440554, guid: aed7cb94438f19b46abd4df337f5cb63, type: 3}
+      propertyPath: m_AABB.m_Extent.z
+      value: 0.066707596
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: aed7cb94438f19b46abd4df337f5cb63, type: 3}
 --- !u!1001 &998283926
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -494,7 +579,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60
+  field of view: 90
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -536,3 +621,4 @@ SceneRoots:
   - {fileID: 685123628}
   - {fileID: 348877359}
   - {fileID: 998283926}
+  - {fileID: 909137850}
